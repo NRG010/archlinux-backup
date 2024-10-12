@@ -1,13 +1,12 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-
     bash = { "shfmt" },
 
     c = { "clang-format" },
     cpp = { "clang-format" },
 
-    python = { "isort", "black" },
+    python = { "autopep8" },
   },
 
   format_on_save = {

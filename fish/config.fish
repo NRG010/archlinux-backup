@@ -2,6 +2,12 @@ abbr pi "yay -S"
 abbr pu "yay -R"
 abbr pc "yay -Yc; yay -Sc; yay"
 
+# Start hyprland at login
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        Hyprland
+    end
+end
 
 # Yazi
 function yy
@@ -12,6 +18,5 @@ function yy
 	end
 	rm -f -- "$tmp"
 end
-
 
 starship init fish | source

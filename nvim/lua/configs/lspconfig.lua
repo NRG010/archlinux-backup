@@ -1,8 +1,9 @@
+-- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
-local servers = { "bashls", "nil_ls", "clangd", "pyright" }
+local servers = { "clangd", "pylsp" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 for _, lsp in ipairs(servers) do
