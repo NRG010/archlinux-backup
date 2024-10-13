@@ -4,19 +4,19 @@ abbr pc "yay -Yc; yay -Sc; yay"
 
 # Start hyprland at login
 if status is-login
-    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        Hyprland
-    end
+  if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+    Hyprland
+  end
 end
 
 # Yazi
 function yy
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	rm -f -- "$tmp"
+  set tmp (mktemp -t "yazi-cwd.XXXXXX")
+  yazi $argv --cwd-file="$tmp"
+  if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+    builtin cd -- "$cwd"
+  end
+  rm -f -- "$tmp"
 end
 
 starship init fish | source

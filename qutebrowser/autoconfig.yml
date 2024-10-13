@@ -25,6 +25,8 @@ settings:
     global: both
   content.headers.accept_language:
     global: en-US,en;q=0.5
+  content.javascript.enabled:
+    global: true
   editor.command:
     global:
     - nvim
