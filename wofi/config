@@ -1,0 +1,8 @@
+show=drun
+width=400
+height=500
+always_parse_args=true
+show_all=false
+term=kitty
+insensitive=true
+columns=1

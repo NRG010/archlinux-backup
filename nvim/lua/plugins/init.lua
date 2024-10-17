@@ -20,6 +20,7 @@ return {
         "lua",
         "vimdoc",
 
+        "nix",
         "bash",
         "fish",
 
